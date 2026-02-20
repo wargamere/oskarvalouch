@@ -310,6 +310,31 @@ section {
     font-size: 0.95rem;
 }
 
+/* INTERESTS */
+.interests-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.interest-chip {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    cursor: default;
+}
+
+.interest-chip:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
 /* FOOTER */
 footer {
     text-align: center;
