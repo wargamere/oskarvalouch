@@ -294,6 +294,10 @@ section {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.four-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .skill-category h3 {
     font-size: 1.1rem;
     color: var(--accent);
@@ -368,7 +372,8 @@ footer {
         font-size: 2.5rem;
     }
 
-    .three-cols {
+    .three-cols,
+    .four-cols {
         grid-template-columns: 1fr;
     }
 }
