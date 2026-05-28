@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Oskar Valouch</title>
+    <meta name="description" content="Projekty z oblasti umělé inteligence, kyberbezpečnosti a programování.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="https://oskarvalouch.cz/wp-content/uploads/2025/10/logo-2.png" alt="Oskar Valouch Logo" class="logo">
+                    <span>OSKAR VALOUCH</span>
+                </a>
+            </div>
+            
+            <button class="menu-btn" aria-label="Menu" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="about.html">O mně</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="theme-toggle" aria-label="Přepnout tmavý režim">
+                        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="fade-in">
+        <section>
+            <div class="container">
+                <h2>Mé Projekty</h2>
+                <p>Níže naleznete mé experimentální a studijní projekty rozdělené podle kategorií. Baví mě zkoumat limity technologií a propojovat různé oblasti.</p>
+
+                <div class="filter-container">
+                    <button class="filter-btn active" data-filter="all">Všechny</button>
+                    <button class="filter-btn" data-filter="ai">AI & Strojové učení</button>
+                    <button class="filter-btn" data-filter="security">Kyberbezpečnost</button>
+                    <button class="filter-btn" data-filter="dev">Vývoj aplikací</button>
+                </div>
+
+                <div class="grid">
+                    <!-- Project 1 -->
+                    <div class="card" data-category="ai dev">
+                        <div class="tag-container">
+                            <span class="tag">Python</span>
+                            <span class="tag">LLM</span>
+                            <span class="tag">Finance</span>
+                        </div>
+                        <h3>Predikce akcií pomocí LLM</h3>
+                        <p class="desc">Experimentální projekt zkoumající reálnou schopnost velkých jazykových modelů předpovídat krátkodobý i dlouhodobý vývoj akciového trhu.</p>
+                        <div class="details">
+                            <p><strong>Přístup:</strong> Testováno bez instrukcí, následně s napojením na Python Yahoo Finance API (analyzováno 50 předních akcií) a zohledněním mediálních zpráv.</p>
+                            <p><strong>Výsledky:</strong> <a href="https://docs.google.com/spreadsheets/d/1k7a_4Scq9hoZHr1aMp1SxBqVq6qdS_XvokOiAhTU4WU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Google Sheets tabulka</a></p>
+                            <p><strong>Naučeno:</strong> Analýza trhu, Google Sheets API, limity kontextu AI modelů.</p>
+                        </div>
+                        <div class="conclusion">
+                            <strong>Závěr:</strong> Současné LLM nejsou vhodné pro spolehlivou predikci, ale slouží výborně pro rychlou sumarizaci sentimentu a zpráv.
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="card" data-category="security">
+                        <div class="tag-container">
+                            <span class="tag">Linux</span>
+                            <span class="tag">Sítě</span>
+                            <span class="tag">CTF</span>
+                        </div>
+                        <h3>Příprava na Kybersoutěž & CTF</h3>
+                        <p class="desc">Teoretická i praktická příprava na celostátní Kybersoutěž, kde jsem v juniorské kategorii v Praze obsadil 3. místo.</p>
+                        <div class="details">
+                            <p><strong>Metody:</strong> Studium síťové architektury (ISO/OSI, protokoly), práce s Linux utilitami, analýza Wireshark logů, kryptografie (šifry, hashe).</p>
+                            <p><strong>Naučeno:</strong> Penetrační testování, bezpečné konfigurace systémů, kryptografické principy a základy forenzní analýzy.</p>
+                        </div>
+                        <div class="conclusion">
+                            <strong>Závěr:</strong> Kyberbezpečnost vyžaduje neustálé sledování nových zranitelností a hluboké porozumění nízkoúrovňovým systémům.
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="card" data-category="ai">
+                        <div class="tag-container">
+                            <span class="tag">Physical AI</span>
+                            <span class="tag">Reinforcement Learning</span>
+                        </div>
+                        <h3>MENACE (1961 Remake)</h3>
+                        <p class="desc">Fyzický, mechanický model strojového učení pro hru piškvorky vytvořený na základě legendárního konceptu Donalda Michieho z roku 1961.</p>
+                        <div class="details">
+                            <p><strong>Princip:</strong> Systém krabiček se sirkami, kde každá krabička reprezentuje jedinečný stav hrací plochy. Model se učí metodou pokusu a omylu (trestů a odměn).</p>
+                            <p><strong>Fotodokumentace:</strong> <a href="https://drive.google.com/drive/folders/1asCODigBxvrx0JhE069o8e7_H5kwGgez?usp=sharing" target="_blank" rel="noopener noreferrer">Snímky na Google Disku</a></p>
+                            <p><strong>Naučeno:</strong> Principy posilovaného učení (Reinforcement Learning) bez nutnosti zapojit procesor.</p>
+                        </div>
+                        <div class="conclusion">
+                            <strong>Závěr:</strong> Fascinující ukázka toho, že algoritmy strojového učení jsou založené na čisté matematické a logické struktuře, nikoliv na digitálním hardwaru.
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="card" data-category="dev">
+                        <div class="tag-container">
+                            <span class="tag">Python</span>
+                            <span class="tag">API</span>
+                            <span class="tag">OpenAI</span>
+                        </div>
+                        <h3>Python Mini-Aplikace</h3>
+                        <p class="desc">Sada menších, funkčních projektů vytvořených za účelem pochopení programovací syntaxe a integrace externích služeb.</p>
+                        <div class="details">
+                            <p><strong>Učitel násobilky:</strong> Interaktivní program využívající ChatGPT API k tvorbě personalizovaných příkladů a slovní podpory. <a href="https://github.com/wargamere/Nasobilka/tree/main" target="_blank" rel="noopener noreferrer">GitHub repozitář</a></p>
+                            <p><strong>Wordle Klon:</strong> Webová předělávka slavné slovní hry s českým slovníkem. <a href="https://wargamere.github.io/Wordle/" target="_blank" rel="noopener noreferrer">Vyzkoušet hru</a></p>
+                            <p><strong>Naučeno:</strong> OOP v Pythonu, práce s JSON a REST API, herní smyčky a stavové automaty.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="card" data-category="dev">
+                        <div class="tag-container">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">Vibe Coding</span>
+                        </div>
+                        <h3>Vibecoding & Sigma</h3>
+                        <p class="desc">Experimenty s rychlým vývojem pomocí AI asistentů (Google Antigravity) a verzováním přes Git/GitHub.</p>
+                        <div class="details">
+                            <p><strong>Projekt Sigma:</strong> Interaktivní webová napodobenina fiktivního prohlížeče z hororové hackerské hry Welcome to the Game (WTTG) 3. <a href="https://wargamere.github.io/sigma/" target="_blank" rel="noopener noreferrer">Přejít na web Sigma</a></p>
+                            <p><strong>Naučeno:</strong> Agilní prototyping, prompt engineering, řešení verzovacích konfliktů, nasazení přes GitHub Pages.</p>
+                        </div>
+                        <div class="conclusion">
+                            <strong>Závěr:</strong> AI nástroje dramaticky urychlují převod myšlenky ve funkční kód, klíčová je však lidská kontrola architektury.
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="card" data-category="dev">
+                        <div class="tag-container">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">WordPress</span>
+                            <span class="tag">UX</span>
+                        </div>
+                        <h3>Osobní Weby & Značka</h3>
+                        <p class="desc">Budování online identity, správa blogu a optimalizace obsahu pro koncové uživatele.</p>
+                        <div class="details">
+                            <p><strong>Tento web:</strong> Moderní, čisté portfolio postavené na zakázkovém CSS a JavaScriptu. <a href="https://wargamere.github.io/oskarvalouch/" target="_blank" rel="noopener noreferrer">GitHub Pages</a></p>
+                            <p><strong>Osobní Blog:</strong> Plnohodnotný web postavený na CMS WordPress se zaměřením na publikaci mých postřehů. <a href="https://oskarvalouch.cz/" target="_blank" rel="noopener noreferrer">oskarvalouch.cz</a></p>
+                            <p><strong>Naučeno:</strong> Správa hostingu, CSS Grid/Flexbox, administrace WordPressu a SEO základy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Oskar Valouch. Všechna práva vyhrazena.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/wargamere" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="mailto:oskarvalouch@gmail.com">E-mail</a>
+                <a href="https://oskarvalouch.cz/" target="_blank" rel="noopener noreferrer">Blog (WordPress)</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

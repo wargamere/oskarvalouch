@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Oskar Valouch</title>
+    <meta name="description" content="Napište mi zprávu nebo mě kontaktujte přímo prostřednictvím e-mailu či GitHubu.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="https://oskarvalouch.cz/wp-content/uploads/2025/10/logo-2.png" alt="Oskar Valouch Logo" class="logo">
+                    <span>OSKAR VALOUCH</span>
+                </a>
+            </div>
+            
+            <button class="menu-btn" aria-label="Menu" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">O mně</a></li>
+                    <li><a href="contact.html" class="active">Kontakt</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="theme-toggle" aria-label="Přepnout tmavý režim">
+                        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="fade-in">
+        <section>
+            <div class="container">
+                <h2>Spojme se</h2>
+                <p>Máte zájem o spolupráci na projektu, dotaz k mým experimentům, nebo mi chcete jen napsat zprávu? Neváhejte použít formulář nebo se mi ozvat napřímo.</p>
+
+                <div class="contact-layout">
+                    <!-- Contact Sidebar Details -->
+                    <div class="contact-info">
+                        <h3>Přímé Kontakty</h3>
+                        <p>Zde jsou mé oficiální komunikační kanály. Odpovídám většinou do 24 hodin.</p>
+                        
+                        <div class="contact-methods">
+                            <!-- Email -->
+                            <div class="contact-method-card">
+                                <span class="contact-icon">📧</span>
+                                <div class="contact-method-details">
+                                    <h4>Napište na e-mail</h4>
+                                    <a href="mailto:oskarvalouch@gmail.com">oskarvalouch@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <!-- GitHub -->
+                            <div class="contact-method-card">
+                                <span class="contact-icon">🐙</span>
+                                <div class="contact-method-details">
+                                    <h4>Sledujte mě</h4>
+                                    <a href="https://github.com/wargamere" target="_blank" rel="noopener noreferrer">github.com/wargamere</a>
+                                </div>
+                            </div>
+
+                            <!-- WordPress Blog -->
+                            <div class="contact-method-card">
+                                <span class="contact-icon">✍️</span>
+                                <div class="contact-method-details">
+                                    <h4>Čtěte můj blog</h4>
+                                    <a href="https://oskarvalouch.cz/" target="_blank" rel="noopener noreferrer">oskarvalouch.cz</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact B&W Interactive Form -->
+                    <div class="contact-form-container">
+                        <h3>Napsat zprávu</h3>
+                        <form id="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name">Jméno a příjmení</label>
+                                <input type="text" id="name" class="form-control" placeholder="Jan Novák" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">E-mailová adresa</label>
+                                <input type="email" id="email" class="form-control" placeholder="jan.novak@email.cz" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Vaše zpráva</label>
+                                <textarea id="message" class="form-control" placeholder="Dobrý den, zaujaly mě vaše projekty..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn primary submit-btn">Odeslat zprávu &rarr;</button>
+                            <div id="form-status" class="form-status"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Oskar Valouch. Všechna práva vyhrazena.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/wargamere" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="mailto:oskarvalouch@gmail.com">E-mail</a>
+                <a href="https://oskarvalouch.cz/" target="_blank" rel="noopener noreferrer">Blog (WordPress)</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

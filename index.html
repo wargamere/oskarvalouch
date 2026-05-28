@@ -4,255 +4,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oskar Valouch | Portfolio</title>
+    <title>Oskar Valouch | Student IT & Kyberbezpečnosti</title>
+    <meta name="description" content="Osobní portfolio studenta se zájmem o kyberbezpečnost, IT a umělou inteligenci.">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="logo-container">
-            <img src="https://oskarvalouch.cz/wp-content/uploads/2025/10/logo-2.png" alt="Oskar Valouch Logo"
-                class="logo">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="https://oskarvalouch.cz/wp-content/uploads/2025/10/logo-2.png" alt="Oskar Valouch Logo" class="logo">
+                    <span>OSKAR VALOUCH</span>
+                </a>
+            </div>
+            
+            <button class="menu-btn" aria-label="Menu" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Domů</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">O mně</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="theme-toggle" aria-label="Přepnout tmavý režim">
+                        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
         </div>
-        <button id="theme-toggle" aria-label="Přepnout tmavý režim">
-            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="5" />
-                <path
-                    d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-            </svg>
-            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-            </svg>
-        </button>
     </header>
 
-    <main>
+    <main class="fade-in">
         <section id="hero">
+            <canvas id="hero-canvas"></canvas>
             <div class="container">
-                <h1>Oskar Valouch</h1>
-                <p class="subtitle">Student se zájmem o kyberbezpečnost, IT a AI</p>
-                <p class="intro">
-                    Zajímám se o technologie, politiku a sport. Mým hlavním zaměřením je kyberbezpečnost, a umělá inteligence. Baví mě oblasti kde se technologie a mé ostatní zájmy propojují, a proto pravidelně sleduji Formuli 1 a hraju videohry.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn primary">Projekty</a>
-                    <a href="#contact" class="btn secondary">Kontakt</a>
+                <div class="hero-wrapper">
+                    <span class="subtitle">KYBERBEZPEČNOST • IT • AI</span>
+                    <h1>Oskar Valouch</h1>
+                    <p class="intro">
+                        Zajímám se o technologie, kyberbezpečnost a umělou inteligenci. Vytvářím experimentální projekty, věnuji se samostudiu IT a pravidelně zkoumám moderní směry jako je reinforcement learning či predikce trhů pomocí LLM.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="portfolio.html" class="btn primary">Prohlédnout Projekty &rarr;</a>
+                        <a href="contact.html" class="btn secondary">Napsat Zprávu</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects">
+        <section id="specialties">
             <div class="container">
-                <h2>Projekty</h2>
+                <h2>Klíčová Zaměření</h2>
                 <div class="grid">
-                    <article class="card">
-                        <h3>Predikce akcií pomocí LLM</h3>
-                        <p class="desc">Experimentální projekt zkoumající schopnost velkých jazykových modelů
-                            předpovídat vývoj akciového trhu.</p>
-                        <div class="details">
-                            <p><strong>Přístup:</strong> Testováno bez instrukcí, následně s napojením na Python API (50
-                                akcií) a analýzou mediálních zpráv.</p>
-                            <p><strong>Výsledky:</strong> <a href="https://docs.google.com/spreadsheets/d/1k7a_4Scq9hoZHr1aMp1SxBqVq6qdS_XvokOiAhTU4WU/edit?usp=sharing" target="_blank">Google Sheets</a></p>
-                            <p><strong>Naučeno:</strong> Základy akciového trhu, Google Sheets, limity AI.</p>
+                    <div class="card">
+                        <div class="tag-container">
+                            <span class="tag">SEC</span>
+                            <span class="tag">LINUX</span>
                         </div>
-                        <p class="conclusion"><strong>Závěr:</strong> LLM nejsou vhodné pro spolehlivou predikci, spíše
-                            pro interpretaci dat.</p>
-                    </article>
-
-                    <article class="card">
-                        <h3>Moje webová stránka</h3>
-                        <p class="desc">Osobní portfolio prezentující mé projekty, dovednosti a zkušenosti.</p>
-                        <div class="details">
-                            <p><strong>Hlavní web:</strong> <a href="https://wargamere.github.io/oskarvalouch/"
-                                    target="_blank">wargamere.github.io/oskarvalouch</a></p>
-                            <p><strong>Blog (WordPress):</strong> <a href="https://oskarvalouch.cz/"
-                                    target="_blank">oskarvalouch.cz</a></p>
-                            <p><strong>Naučeno:</strong> HTML, CSS, JavaScript, GitHub Pages, práce s CMS WordPress,
-                                budování osobní značky.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="card">
-                        <h3>MENACE (1961 Remake)</h3>
-                        <p class="desc">Fyzický model strojového učení pro hru piškvorky podle Donalda Michieho.</p>
-                        <div class="details">
-                            <p><strong>Princip:</strong> Krabičky se sirkami reprezentující stavy hry.</p>
-                            <p><strong>Fotky:</strong> <a href="https://drive.google.com/drive/folders/1asCODigBxvrx0JhE069o8e7_H5kwGgez?usp=sharing" target="_blank">Google disk</a></p>
-                            <p><strong>Naučeno:</strong> Základní principy posilovaného učení (Reinforcement Learning)
-                                bez počítače.</p>
-                        </div>
-                    </article>
-
-                    <article class="card">
-                        <h3>Python projekty</h3>
-                        <p class="desc">Sada menších aplikací pro procvičení programování.</p>
-                        <div class="details">
-                            <p><strong>Obsah:</strong> Klon hry Wordle, učitel malé násobilky s využitím ChatGPT API.
-                            </p>
-                            <p><strong>Hra Wordle:</strong> <a href="https://wargamere.github.io/Wordle/" target="_blank">Odkaz</a></p>
-                            <p><strong>Učitel násobilky:</strong> <a href="https://github.com/wargamere/Nasobilka/tree/main" target="_blank">Github</a></p>
-                            <p><strong>Naučeno:</strong> Syntax Pythonu, práce s externími API, logika her.</p>
-                        </div>
-                    </article>
-
-                    <article class="card">
-                        <h3>Vibecoding</h3>
-                        <p class="desc">Experimenty s Google Antigravity a GitHubem.</p>
-                        <div class="details">
-                            <p><strong>Projekt:</strong> Napodobenina hororové hry WTTG 3.</p>
-                            <p><strong>Web:</strong> <a href="https://wargamere.github.io/sigma/"
-                                    target="_blank">wargamere.github.io/sigma</a></p>
-                            <p><strong>Naučeno:</strong> Rychlé prototypování (vibecoding), práce s verzovacími systémy.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="timeline-section">
-            <div class="container">
-                <h2>Cesta & Úspěchy</h2>
-                <ul class="timeline">
-                    <li>
-                        <span class="date">2. 2. 2026</span>
-                        <div class="content">
-                            <strong>Politická soutěž v NextZone</strong>
-                            <p>Účast na SSPŠ</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="date">2025</span>
-                        <div class="content">
-                            <strong>Kybersoutěž</strong>
-                            <p>3. místo (Junior, Praha)</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="date">2025</span>
-                        <div class="content">
-                            <strong>Bobřík informatiky</strong>
-                            <p>129 bodů (Kategorie Junior)</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="date">2024–2025</span>
-                        <div class="content">
-                            <strong>AI dětem</strong>
-                            <p>Brigáda – testování AI aplikací, správa počítačů a technická podpora.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="date">2024</span>
-                        <div class="content">
-                            <strong>SCIO OSP</strong>
-                            <p>2. místo v Praze</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="date">2018–2025</span>
-                        <div class="content">
-                            <strong>Vzdělávací akce</strong>
-                            <p>Minecraft tábory, AI a robotika kroužky, letní školy a workshopy (SSPŠ, UŠI kemp).</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="date">2019</span>
-                        <div class="content">
-                            <strong>Future Factory</strong>
-                            <p>1. místo</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="self-study">
-            <div class="container">
-                <h2>Samostudium</h2>
-                <ul class="list-simple">
-                    <li><strong>Elements of AI:</strong> Dokončený kurz základů umělé inteligence.</li>
-                    <li><strong>Kyberbezpečnost:</strong> Vlastní studijní plán generovaný ChatGPT.</li>
-                    <li><strong>CCC 39 (Hamburk, 2025):</strong> Sledování přednášek z <a
-                            href="https://media.ccc.de/c/39c3" target="_blank">Chaos Communication Congress</a>.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="skills">
-            <div class="container">
-                <h2>Skills</h2>
-                <div class="grid four-cols">
-                    <div class="skill-category">
-                        <h3>Technické</h3>
-                        <ul>
-                            <li>Prompting (LLM)</li>
-                            <li>Vibe Coding</li>
-                            <li>3D modelování</li>
-                            <li>Pájení</li>
-                            <li>Základy sítí</li>
-                        </ul>
+                        <h3>Kyberbezpečnost</h3>
+                        <p class="desc">
+                            Zaměření na bezpečnost sítí, Linux nástroje, analýzu zranitelností a bezpečnostní standardy. Pravidelný účastník Kybersoutěže.
+                        </p>
                     </div>
-                    <div class="skill-category">
-                        <h3>Software</h3>
-                        <ul>
-                            <li>Linux nástroje</li>
-                            <li>Antigravity</li>
-                            <li>ChatGPT / OpenAI API</li>
-                            <li>GitHub / Git</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Jazyky</h3>
-                        <ul>
-                            <li>Python</li>
-                            <li>HTML & CSS (Základy)</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Cizí jazyky</h3>
-                        <ul>
-                            <li>Angličtina</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="interests">
-            <div class="container">
-                <h2>Zájmy</h2>
-                <div class="interests-grid">
-                    <div class="interest-chip">🏎️ Formule 1</div>
-                    <div class="interest-chip">🧗 Lezení</div>
-                    <div class="interest-chip">🏛️ Politika</div>
-                    <div class="interest-chip">⚽ Sport</div>
-                    <div class="interest-chip">🚀 Nové technologie</div>
-                </div>
-            </div>
-        </section>
+                    <div class="card">
+                        <div class="tag-container">
+                            <span class="tag">LLM</span>
+                            <span class="tag">RL</span>
+                        </div>
+                        <h3>Umělá Inteligence</h3>
+                        <p class="desc">
+                            Zkoumání velkých jazykových modelů, fyzické modelování posilovaného učení (MENACE) a integrace API pro inteligentní nástroje.
+                        </p>
+                    </div>
 
-        <section id="contact">
-            <div class="container">
-                <h2>Kontakt</h2>
-                <div class="contact-links">
-                    <a href="mailto:oskarvalouch@gmail.com" class="btn secondary">📧 Napište mi e-mail</a>
-                    <a href="https://github.com/wargamere" target="_blank" class="btn secondary">🐙 GitHub Profil</a>
+                    <div class="card">
+                        <div class="tag-container">
+                            <span class="tag">PYTHON</span>
+                            <span class="tag">WEB</span>
+                        </div>
+                        <h3>Vývoj Aplikací</h3>
+                        <p class="desc">
+                            Rychlé prototypování (vibe coding), vývoj v Pythonu (hry, API utility) a tvorba moderních, čistých uživatelských rozhraní.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Oskar Valouch</p>
+        <div class="container">
+            <p>&copy; 2026 Oskar Valouch. Všechna práva vyhrazena.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/wargamere" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="mailto:oskarvalouch@gmail.com">E-mail</a>
+                <a href="https://oskarvalouch.cz/" target="_blank" rel="noopener noreferrer">Blog (WordPress)</a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
