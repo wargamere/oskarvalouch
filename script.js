@@ -269,11 +269,44 @@ document.addEventListener('DOMContentLoaded', () => {
             // Success feedback animation
             showStatus('Odesílám zprávu...', 'success');
             
-            setTimeout(() => {
-                showStatus('Zpráva byla úspěšně odeslána! Ozvu se vám co nejdříve.', 'success');
-                contactForm.reset();
-                inputs.forEach(input => input.parentElement.classList.remove('valid'));
-            }, 1200);
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            if (submitBtn) {
+                submitBtn.disabled = true;
+            }
+
+            // Web3Forms API Submission
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    access_key: 'f1d89061-1d77-4fdf-9d6d-fad7bc7cc352',
+                    name: nameInput.value.trim(),
+                    email: emailInput.value.trim(),
+                    message: msgInput.value.trim()
+                })
+            })
+            .then(async (response) => {
+                const json = await response.json();
+                if (response.status === 200 && json.success) {
+                    showStatus('Zpráva byla úspěšně odeslána! Ozvu se vám co nejdříve.', 'success');
+                    contactForm.reset();
+                    inputs.forEach(input => input.parentElement.classList.remove('valid'));
+                } else {
+                    showStatus(json.message || 'Něco se nepovedlo. Zkuste to prosím později.', 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Web3Forms Error:', error);
+                showStatus('Odeslání selhalo kvůli chybě sítě. Zkuste to prosím později.', 'error');
+            })
+            .finally(() => {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                }
+            });
         });
 
         function showStatus(message, type) {
