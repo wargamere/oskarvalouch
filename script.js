@@ -275,31 +275,46 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Web3Forms API Submission
+            const formData = {
+                access_key: 'f1d89061-1d77-4fdf-9d6d-fad7bc7cc352',
+                subject: 'Nová zpráva z webu oskarvalouch',
+                from_name: 'Kontaktní formulář - oskarvalouch',
+                name: nameInput.value.trim(),
+                email: emailInput.value.trim(),
+                replyto: emailInput.value.trim(),
+                message: msgInput.value.trim(),
+                botcheck: ''
+            };
+
             fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
-                body: JSON.stringify({
-                    access_key: 'f1d89061-1d77-4fdf-9d6d-fad7bc7cc352',
-                    name: nameInput.value.trim(),
-                    email: emailInput.value.trim(),
-                    message: msgInput.value.trim()
-                })
+                body: JSON.stringify(formData)
             })
             .then(async (response) => {
-                const json = await response.json();
+                let json;
+                try {
+                    json = await response.json();
+                } catch (parseError) {
+                    console.error('Failed to parse response:', parseError);
+                    showStatus('Chyba při zpracování odpovědi serveru.', 'error');
+                    return;
+                }
+                console.log('Web3Forms response:', response.status, json);
                 if (response.status === 200 && json.success) {
                     showStatus('Zpráva byla úspěšně odeslána! Ozvu se vám co nejdříve.', 'success');
                     contactForm.reset();
                     inputs.forEach(input => input.parentElement.classList.remove('valid'));
                 } else {
+                    console.error('Web3Forms error response:', json);
                     showStatus(json.message || 'Něco se nepovedlo. Zkuste to prosím později.', 'error');
                 }
             })
             .catch(error => {
-                console.error('Web3Forms Error:', error);
+                console.error('Web3Forms network error:', error);
                 showStatus('Odeslání selhalo kvůli chybě sítě. Zkuste to prosím později.', 'error');
             })
             .finally(() => {
