@@ -18,7 +18,7 @@
                     <span>OSKAR VALOUCH</span>
                 </a>
             </div>
-            
+
             <button class="menu-btn" aria-label="Menu" id="mobile-menu-btn">
                 <span></span>
                 <span></span>
@@ -27,10 +27,10 @@
 
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="index.html" data-key="nav-home">Domů</a></li>
                     <li><a href="portfolio.html" class="active">Portfolio</a></li>
-                    <li><a href="about.html">O mně</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="about.html" data-key="nav-about">O mně</a></li>
+                    <li><a href="contact.html" data-key="nav-contact">Kontakt</a></li>
                 </ul>
                 <div class="nav-actions">
                     <button id="theme-toggle" aria-label="Přepnout tmavý režim">
@@ -49,6 +49,7 @@
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                         </svg>
                     </button>
+                    <button id="lang-toggle" aria-label="Switch language">EN</button>
                 </div>
             </nav>
         </div>
@@ -57,14 +58,14 @@
     <main class="fade-in">
         <section>
             <div class="container">
-                <h2>Mé Projekty</h2>
-                <p>Níže naleznete mé experimentální a studijní projekty rozdělené podle kategorií. Baví mě zkoumat limity technologií a propojovat různé oblasti.</p>
+                <h2 data-key="portfolio-heading">Mé Projekty</h2>
+                <p data-key="portfolio-intro">Níže naleznete mé experimentální a studijní projekty rozdělené podle kategorií. Baví mě zkoumat limity technologií a propojovat různé oblasti.</p>
 
                 <div class="filter-container">
-                    <button class="filter-btn active" data-filter="all">Všechny</button>
-                    <button class="filter-btn" data-filter="ai">AI & Strojové učení</button>
-                    <button class="filter-btn" data-filter="security">Kyberbezpečnost</button>
-                    <button class="filter-btn" data-filter="dev">Vývoj aplikací</button>
+                    <button class="filter-btn active" data-filter="all" data-key="filter-all">Všechny</button>
+                    <button class="filter-btn" data-filter="ai" data-key="filter-ai-ml">AI & Strojové učení</button>
+                    <button class="filter-btn" data-filter="security" data-key="filter-security-btn">Kyberbezpečnost</button>
+                    <button class="filter-btn" data-filter="dev" data-key="filter-dev-btn">Vývoj aplikací</button>
                 </div>
 
                 <div class="grid">
@@ -75,15 +76,15 @@
                             <span class="tag">LLM</span>
                             <span class="tag">Finance</span>
                         </div>
-                        <h3>Predikce akcií pomocí LLM</h3>
-                        <p class="desc">Experimentální projekt zkoumající reálnou schopnost velkých jazykových modelů předpovídat krátkodobý i dlouhodobý vývoj akciového trhu.</p>
+                        <h3 data-key="proj1-title">Predikce akcií pomocí LLM</h3>
+                        <p class="desc" data-key="proj1-desc">Experimentální projekt zkoumající reálnou schopnost velkých jazykových modelů předpovídat krátkodobý i dlouhodobý vývoj akciového trhu.</p>
                         <div class="details">
                             <p><strong>Přístup:</strong> Testováno bez instrukcí, následně s napojením na Python Yahoo Finance API (analyzováno 50 předních akcií) a zohledněním mediálních zpráv.</p>
                             <p><strong>Výsledky:</strong> <a href="https://docs.google.com/spreadsheets/d/1k7a_4Scq9hoZHr1aMp1SxBqVq6qdS_XvokOiAhTU4WU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Google Sheets tabulka</a></p>
                             <p><strong>Naučeno:</strong> Analýza trhu, Google Sheets API, limity kontextu AI modelů.</p>
                         </div>
                         <div class="conclusion">
-                            <strong>Závěr:</strong> Současné LLM nejsou vhodné pro spolehlivou predikci, ale slouží výborně pro rychlou sumarizaci sentimentu a zpráv.
+                            <strong data-key="conclusion-label">Závěr:</strong> <span data-key="proj1-conclusion">Současné LLM nejsou vhodné pro spolehlivou predikci, ale slouží výborně pro rychlou sumarizaci sentimentu a zpráv.</span>
                         </div>
                     </div>
 
@@ -94,14 +95,14 @@
                             <span class="tag">Sítě</span>
                             <span class="tag">CTF</span>
                         </div>
-                        <h3>Příprava na Kybersoutěž & CTF</h3>
-                        <p class="desc">Teoretická i praktická příprava na celostátní Kybersoutěž, kde jsem v juniorské kategorii v Praze obsadil 3. místo.</p>
+                        <h3 data-key="proj2-title">Příprava na Kybersoutěž & CTF</h3>
+                        <p class="desc" data-key="proj2-desc">Teoretická i praktická příprava na celostátní Kybersoutěž, kde jsem v juniorské kategorii v Praze obsadil 3. místo.</p>
                         <div class="details">
                             <p><strong>Metody:</strong> Studium síťové architektury (ISO/OSI, protokoly), práce s Linux utilitami, analýza Wireshark logů, kryptografia (šifry, hashe).</p>
                             <p><strong>Naučeno:</strong> Penetrační testování, bezpečné konfigurace systémů, kryptografické principy a základy forenzní analýzy.</p>
                         </div>
                         <div class="conclusion">
-                            <strong>Závěr:</strong> Kyberbezpečnost vyžaduje neustálé sledování nových zranitelností a hluboké porozumění nízkoúrovňovým systémům.
+                            <strong data-key="conclusion-label">Závěr:</strong> <span data-key="proj2-conclusion">Kyberbezpečnost vyžaduje neustálé sledování nových zranitelností a hluboké porozumění nízkoúrovňovým systémům.</span>
                         </div>
                     </div>
 
@@ -111,15 +112,15 @@
                             <span class="tag">Physical AI</span>
                             <span class="tag">Reinforcement Learning</span>
                         </div>
-                        <h3>MENACE (1961 Remake)</h3>
-                        <p class="desc">Fyzický, mechanický model strojového učení pro hru piškvorky vytvořený na základě legendárního konceptu Donalda Michieho z roku 1961.</p>
+                        <h3 data-key="proj3-title">MENACE (1961 Remake)</h3>
+                        <p class="desc" data-key="proj3-desc">Fyzický, mechanický model strojového učení pro hru piškvorky vytvořený na základě legendárního konceptu Donalda Michieho z roku 1961.</p>
                         <div class="details">
                             <p><strong>Princip:</strong> Systém krabiček se sirkami, kde každá krabička reprezentuje jedinečný stav hrací plochy. Model se učí metodou pokusu a omylu (trestů a odměn).</p>
                             <p><strong>Fotodokumentace:</strong> <a href="https://drive.google.com/drive/folders/1asCODigBxvrx0JhE069o8e7_H5kwGgez?usp=sharing" target="_blank" rel="noopener noreferrer">Snímky na Google Disku</a></p>
                             <p><strong>Naučeno:</strong> Principy posilovaného učení (Reinforcement Learning) bez nutnosti zapojit procesor.</p>
                         </div>
                         <div class="conclusion">
-                            <strong>Závěr:</strong> Fascinující ukázka toho, že algoritmy strojového učení jsou založené na čisté matematické a logické struktuře, nikoliv na digitálním hardwaru.
+                            <strong data-key="conclusion-label">Závěr:</strong> <span data-key="proj3-conclusion">Fascinující ukázka toho, že algoritmy strojového učení jsou založené na čisté matematické a logické struktuře, nikoliv na digitálním hardwaru.</span>
                         </div>
                     </div>
 
@@ -130,8 +131,8 @@
                             <span class="tag">API</span>
                             <span class="tag">OpenAI</span>
                         </div>
-                        <h3>Python Mini-Aplikace</h3>
-                        <p class="desc">Sada menších, funkčních projektů vytvořených za účelem pochopení programovací syntaxe a integrace externích služeb.</p>
+                        <h3 data-key="proj4-title">Python Mini-Aplikace</h3>
+                        <p class="desc" data-key="proj4-desc">Sada menších, funkčních projektů vytvořených za účelem pochopení programovací syntaxe a integrace externích služeb.</p>
                         <div class="details">
                             <p><strong>Učitel násobilky:</strong> Interaktivní program využívající ChatGPT API k tvorbě personalizovaných příkladů a slovní podpory. <a href="https://github.com/wargamere/Nasobilka/tree/main" target="_blank" rel="noopener noreferrer">GitHub repozitář</a></p>
                             <p><strong>Wordle Klon:</strong> Webová předělávka slavné slovní hry s českým slovníkem. <a href="https://wargamere.github.io/Wordle/" target="_blank" rel="noopener noreferrer">Vyzkoušet hru</a></p>
@@ -146,14 +147,14 @@
                             <span class="tag">GitHub</span>
                             <span class="tag">Vibe Coding</span>
                         </div>
-                        <h3>Vibecoding & Sigma</h3>
-                        <p class="desc">Experimenty s rychlým vývojem pomocí AI asistentů (Google Antigravity) a verzováním přes Git/GitHub.</p>
+                        <h3 data-key="proj5-title">Vibecoding & Sigma</h3>
+                        <p class="desc" data-key="proj5-desc">Experimenty s rychlým vývojem pomocí AI asistentů (Google Antigravity) a verzováním přes Git/GitHub.</p>
                         <div class="details">
                             <p><strong>Projekt Sigma:</strong> Interaktivní webová napodobenina fiktivního prohlížeče z hororové hackerské hry Welcome to the Game (WTTG) 3. <a href="https://wargamere.github.io/sigma/" target="_blank" rel="noopener noreferrer">Přejít na web Sigma</a></p>
                             <p><strong>Naučeno:</strong> Agilní prototyping, prompt engineering, řešení verzovacích konfliktů, nasazení přes GitHub Pages.</p>
                         </div>
                         <div class="conclusion">
-                            <strong>Závěr:</strong> AI nástroje dramaticky urychlují převod myšlenky ve funkční kód, klíčová je však lidská kontrola architektury.
+                            <strong data-key="conclusion-label">Závěr:</strong> <span data-key="proj5-conclusion">AI nástroje dramaticky urychlují převod myšlenky ve funkční kód, klíčová je však lidská kontrola architektury.</span>
                         </div>
                     </div>
 
@@ -164,14 +165,14 @@
                             <span class="tag">Vibe Coding</span>
                             <span class="tag">UX</span>
                         </div>
-                        <h3>Osobní Web & Značka</h3>
-                        <p class="desc">Budování online identity a vlastní prezentace pomocí AI-asistovaného vývoje (vibe coding).</p>
+                        <h3 data-key="proj6-title">Osobní Web & Značka</h3>
+                        <p class="desc" data-key="proj6-desc">Budování online identity a vlastní prezentace pomocí AI-asistovaného vývoje (vibe coding).</p>
                         <div class="details">
                             <p><strong>oskarvalouch.cz:</strong> Kompletní osobní web vibecódovaný s pomocí AI nástrojů. Moderní design, plně responzivní. <a href="https://oskarvalouch.cz/" target="_blank" rel="noopener noreferrer">Navštívit web</a></p>
                             <p><strong>Naučeno:</strong> Rychlý prototyping s AI, správa hostingu, CSS Grid/Flexbox a nasazení na vlastní doménu.</p>
                         </div>
                         <div class="conclusion">
-                            <strong>Závěr:</strong> Vibe coding dramaticky zkracuje cestu od nápadu k funkčnímu webu – klíčem je správně definovat záměr a výsledek zkontrolovat.
+                            <strong data-key="conclusion-label">Závěr:</strong> <span data-key="proj6-conclusion">Vibe coding dramaticky zkracuje cestu od nápadu k funkčnímu webu – klíčem je správně definovat záměr a výsledek zkontrolovat.</span>
                         </div>
                     </div>
                 </div>
@@ -181,7 +182,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Oskar Valouch. Všechna práva vyhrazena.</p>
+            <p>&copy; 2026 Oskar Valouch. <span data-key="footer-rights">Všechna práva vyhrazena.</span></p>
             <div class="footer-socials">
                 <a href="https://github.com/wargamere" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="mailto:oskarvalouch@gmail.com">E-mail</a>
