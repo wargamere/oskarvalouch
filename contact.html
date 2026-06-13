@@ -18,7 +18,7 @@
                     <span>OSKAR VALOUCH</span>
                 </a>
             </div>
-            
+
             <button class="menu-btn" aria-label="Menu" id="mobile-menu-btn">
                 <span></span>
                 <span></span>
@@ -27,10 +27,10 @@
 
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="index.html" data-key="nav-home">Domů</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="about.html">O mně</a></li>
-                    <li><a href="contact.html" class="active">Kontakt</a></li>
+                    <li><a href="about.html" data-key="nav-about">O mně</a></li>
+                    <li><a href="contact.html" class="active" data-key="nav-contact">Kontakt</a></li>
                 </ul>
                 <div class="nav-actions">
                     <button id="theme-toggle" aria-label="Přepnout tmavý režim">
@@ -38,10 +38,10 @@
                             <circle cx="12" cy="12" r="5" />
                             <line x1="12" y1="1" x2="12" y2="3" />
                             <line x1="12" y1="21" x2="12" y2="23" />
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
                             <line x1="1" y1="12" x2="3" y2="12" />
                             <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
                             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
                             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
                         </svg>
@@ -49,6 +49,7 @@
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                         </svg>
                     </button>
+                    <button id="lang-toggle" aria-label="Switch language">EN</button>
                 </div>
             </nav>
         </div>
@@ -57,65 +58,60 @@
     <main class="fade-in">
         <section>
             <div class="container">
-                <h2>Spojme se</h2>
-                <p>Máte zájem o spolupráci na projektu, dotaz k mým experimentům, nebo mi chcete jen napsat zprávu? Neváhejte použít formulář nebo se mi ozvat napřímo.</p>
+                <h2 data-key="contact-heading">Spojme se</h2>
+                <p data-key="contact-intro">Máte zájem o spolupráci na projektu, dotaz k mým experimentům, nebo mi chcete jen napsat zprávu? Neváhejte použít formulář nebo se mi ozvat napřímo.</p>
 
                 <div class="contact-layout">
-                    <!-- Contact Sidebar Details -->
                     <div class="contact-info">
-                        <h3>Přímé Kontakty</h3>
-                        <p>Zde jsou mé oficiální komunikační kanály. Odpovídám většinou do 24 hodin.</p>
-                        
+                        <h3 data-key="contact-direct-heading">Přímé Kontakty</h3>
+                        <p data-key="contact-direct-desc">Zde jsou mé oficiální komunikační kanály. Odpovídám většinou do 24 hodin.</p>
+
                         <div class="contact-methods">
-                            <!-- Email -->
                             <div class="contact-method-card">
                                 <span class="contact-icon">📧</span>
                                 <div class="contact-method-details">
-                                    <h4>Napište na e-mail</h4>
+                                    <h4 data-key="contact-email-label">Napište na e-mail</h4>
                                     <a href="mailto:oskarvalouch@gmail.com">oskarvalouch@gmail.com</a>
                                 </div>
                             </div>
 
-                            <!-- GitHub -->
                             <div class="contact-method-card">
                                 <span class="contact-icon">🐙</span>
                                 <div class="contact-method-details">
-                                    <h4>Sledujte mě</h4>
+                                    <h4 data-key="contact-github-label">Sledujte mě</h4>
                                     <a href="https://github.com/wargamere" target="_blank" rel="noopener noreferrer">github.com/wargamere</a>
                                 </div>
                             </div>
 
-                            <!-- WordPress Blog -->
                             <div class="contact-method-card">
                                 <span class="contact-icon">✍️</span>
                                 <div class="contact-method-details">
-                                    <h4>Čtěte můj blog</h4>
+                                    <h4 data-key="contact-blog-label">Čtěte můj blog</h4>
                                     <a href="https://oskarvalouch.cz/" target="_blank" rel="noopener noreferrer">oskarvalouch.cz</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Contact B&W Interactive Form -->
                     <div class="contact-form-container">
-                        <h3>Napsat zprávu</h3>
+                        <h3 data-key="contact-form-heading">Napsat zprávu</h3>
                         <form id="contact-form" novalidate>
                             <div class="form-group">
-                                <label for="name">Jméno a příjmení</label>
-                                <input type="text" id="name" name="name" class="form-control" placeholder="Jan Novák" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">E-mailová adresa</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="jan.novak@email.cz" required>
+                                <label for="name" data-key="form-name-label">Jméno a příjmení</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Jan Novák" data-placeholder-key="form-name-placeholder" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="message">Vaše zpráva</label>
-                                <textarea id="message" name="message" class="form-control" placeholder="Dobrý den, zaujaly mě vaše projekty..." required></textarea>
+                                <label for="email" data-key="form-email-label">E-mailová adresa</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="jan.novak@email.cz" data-placeholder-key="form-email-placeholder" required>
                             </div>
 
-                            <button type="submit" class="btn primary submit-btn">Odeslat zprávu &rarr;</button>
+                            <div class="form-group">
+                                <label for="message" data-key="form-message-label">Vaše zpráva</label>
+                                <textarea id="message" name="message" class="form-control" placeholder="Dobrý den, zaujaly mě vaše projekty..." data-placeholder-key="form-message-placeholder" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn primary submit-btn" data-key="btn-send">Odeslat zprávu &rarr;</button>
                             <div id="form-status" class="form-status"></div>
                         </form>
                     </div>
@@ -126,7 +122,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Oskar Valouch. Všechna práva vyhrazena.</p>
+            <p>&copy; 2026 Oskar Valouch. <span data-key="footer-rights">Všechna práva vyhrazena.</span></p>
             <div class="footer-socials">
                 <a href="https://github.com/wargamere" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="mailto:oskarvalouch@gmail.com">E-mail</a>
