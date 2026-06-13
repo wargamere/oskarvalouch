@@ -18,7 +18,7 @@
                     <span>OSKAR VALOUCH</span>
                 </a>
             </div>
-            
+
             <button class="menu-btn" aria-label="Menu" id="mobile-menu-btn">
                 <span></span>
                 <span></span>
@@ -27,10 +27,10 @@
 
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Domů</a></li>
+                    <li><a href="index.html" class="active" data-key="nav-home">Domů</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="about.html">O mně</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="about.html" data-key="nav-about">O mně</a></li>
+                    <li><a href="contact.html" data-key="nav-contact">Kontakt</a></li>
                 </ul>
                 <div class="nav-actions">
                     <button id="theme-toggle" aria-label="Přepnout tmavý režim">
@@ -49,6 +49,7 @@
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                         </svg>
                     </button>
+                    <button id="lang-toggle" aria-label="Switch language">EN</button>
                 </div>
             </nav>
         </div>
@@ -59,14 +60,14 @@
             <canvas id="hero-canvas"></canvas>
             <div class="container">
                 <div class="hero-wrapper">
-                    <span class="subtitle">KYBERBEZPEČNOST • IT • AI</span>
+                    <span class="subtitle" data-key="hero-subtitle">KYBERBEZPEČNOST • IT • AI</span>
                     <h1>Oskar Valouch</h1>
-                    <p class="intro">
+                    <p class="intro" data-key="hero-intro">
                         Zajímám se o technologie, kyberbezpečnost a umělou inteligenci. Vytvářím experimentální projekty, věnuji se samostudiu IT a pravidelně zkoumám moderní směry jako je reinforcement learning či predikce trhů pomocí LLM.
                     </p>
                     <div class="cta-buttons">
-                        <a href="portfolio.html" class="btn primary">Prohlédnout Projekty &rarr;</a>
-                        <a href="contact.html" class="btn secondary">Napsat Zprávu</a>
+                        <a href="portfolio.html" class="btn primary" data-key="btn-view-projects">Prohlédnout Projekty &rarr;</a>
+                        <a href="contact.html" class="btn secondary" data-key="btn-send-message">Napsat Zprávu</a>
                     </div>
                 </div>
             </div>
@@ -74,15 +75,15 @@
 
         <section id="specialties">
             <div class="container">
-                <h2>Klíčová Zaměření</h2>
+                <h2 data-key="specialties-heading">Klíčová Zaměření</h2>
                 <div class="grid">
                     <div class="card">
                         <div class="tag-container">
                             <span class="tag">SEC</span>
                             <span class="tag">LINUX</span>
                         </div>
-                        <h3>Kyberbezpečnost</h3>
-                        <p class="desc">
+                        <h3 data-key="spec-security-title">Kyberbezpečnost</h3>
+                        <p class="desc" data-key="spec-security-desc">
                             Zaměření na bezpečnost sítí, Linux nástroje, analýzu zranitelností a bezpečnostní standardy. Pravidelný účastník Kybersoutěže.
                         </p>
                     </div>
@@ -92,8 +93,8 @@
                             <span class="tag">LLM</span>
                             <span class="tag">RL</span>
                         </div>
-                        <h3>Umělá Inteligence</h3>
-                        <p class="desc">
+                        <h3 data-key="spec-ai-title">Umělá Inteligence</h3>
+                        <p class="desc" data-key="spec-ai-desc">
                             Zkoumání velkých jazykových modelů, fyzické modelování posilovaného učení (MENACE) a integrace API pro inteligentní nástroje.
                         </p>
                     </div>
@@ -103,8 +104,8 @@
                             <span class="tag">PYTHON</span>
                             <span class="tag">WEB</span>
                         </div>
-                        <h3>Vývoj Aplikací</h3>
-                        <p class="desc">
+                        <h3 data-key="spec-dev-title">Vývoj Aplikací</h3>
+                        <p class="desc" data-key="spec-dev-desc">
                             Rychlé prototypování (vibe coding), vývoj v Pythonu (hry, API utility) a tvorba moderních, čistých uživatelských rozhraní.
                         </p>
                     </div>
@@ -115,7 +116,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Oskar Valouch. Všechna práva vyhrazena.</p>
+            <p>&copy; 2026 Oskar Valouch. <span data-key="footer-rights">Všechna práva vyhrazena.</span></p>
             <div class="footer-socials">
                 <a href="https://github.com/wargamere" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="mailto:oskarvalouch@gmail.com">E-mail</a>
