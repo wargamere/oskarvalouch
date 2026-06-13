@@ -16,11 +16,11 @@
     --btn-primary-text: #ffffff;
     --btn-secondary-bg: transparent;
     --btn-secondary-text: #000000;
-    
+
     --font-main: 'Plus Jakarta Sans', sans-serif;
     --font-heading: 'Space Grotesk', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
-    
+
     --transition-speed: 0.3s;
     --transition-elastic: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -221,7 +221,7 @@ nav {
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 #theme-toggle {
@@ -239,6 +239,29 @@ nav {
 }
 
 #theme-toggle:hover {
+    border-color: var(--text-primary);
+    background-color: var(--border-subtle);
+}
+
+#lang-toggle {
+    background: none;
+    border: 1px solid var(--border-subtle);
+    cursor: pointer;
+    color: var(--text-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    transition: border-color var(--transition-speed), background-color var(--transition-speed);
+}
+
+#lang-toggle:hover {
     border-color: var(--text-primary);
     background-color: var(--border-subtle);
 }
@@ -836,7 +859,6 @@ textarea.form-control {
     min-height: 120px;
 }
 
-/* Form validation states styling */
 .form-group.valid .form-control {
     border-color: #000000;
 }
@@ -921,15 +943,15 @@ footer p {
     header .container {
         height: 70px;
     }
-    
+
     main {
         margin-top: 70px;
     }
-    
+
     .menu-btn {
         display: block;
     }
-    
+
     nav {
         position: fixed;
         top: 70px;
@@ -946,26 +968,26 @@ footer p {
         transition: transform 0.4s var(--transition-elastic), background-color var(--transition-speed) ease;
         border-top: 1px solid var(--border-subtle);
     }
-    
+
     nav.open {
         transform: translateX(0);
     }
-    
+
     .nav-links {
         flex-direction: column;
         align-items: center;
         gap: 30px;
     }
-    
+
     .nav-links a {
         font-size: 1.5rem;
     }
-    
+
     .nav-actions {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: row;
+        gap: 15px;
     }
-    
+
     .contact-layout {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -976,26 +998,26 @@ footer p {
     section {
         padding: 60px 0;
     }
-    
+
     #hero {
         padding: 40px 0;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         width: 100%;
     }
-    
+
     .btn {
         width: 100%;
         justify-content: center;
     }
-    
+
     .contact-form-container {
         padding: 25px;
         box-shadow: 4px 4px 0px var(--text-primary);
     }
-    
+
     footer .container {
         flex-direction: column;
         text-align: center;
